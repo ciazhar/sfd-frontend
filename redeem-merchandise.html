@@ -156,8 +156,8 @@
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                         <li class="active">Software Freedom Day</li>
-                        <li class="active">Workshop</li>
-                        <li class="active">All Participant</li>
+                        <li class="active">Festival</li>
+                        <li class="active">Redeem Merchandise</li>
                     </ol>
                 </section>
 
@@ -168,130 +168,14 @@
                         <div class="col-md-12">
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Workshop Participant</h3>
+                                    <h3 class="box-title">Redeem Merchandise</h3>
                                     <div class="box-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     </div>
                                 </div>
                             
                                 <div class="box-body">
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-input">Add Participant</button><br>
-                                    <div class="modal fade" id="modal-input">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title">Add Parcipant</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                        <form role="form">
-                                                            <div class="box-body">
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputNama">Nama</label>
-                                                                    <input type="text" class="form-control" id="exampleInputNama" placeholder="Masukkan nama">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputNama">Nim</label>
-                                                                    <input type="text" class="form-control" id="exampleInputNama" placeholder="Masukkan nama">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputEmail1">Email address</label>
-                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan email">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputEmail1">Program Studi</label>
-                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan email">
-                                                                </div>
-                                                            </div>
-                                                            <!-- /.box-body -->
-                                                        </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                    <br>
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama</th>
-                                                <th>Nim</th>
-                                                <th>Email</th>
-                                                <th>Program Studi</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>{{user.name}}</td>
-                                                <td>{{user.nim}}</td>
-                                                <td>{{user.email}}</td>
-                                                <td>{{user.progdi}}</td>
-                                                <td>      
-                                                    <center>       
-                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
-                                                            <i class="fa fa-edit"></i> Edit
-                                                        </button> 
-                                                        <div class="modal fade" id="modal-default">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span></button>
-                                                                    <h4 class="modal-title">Default Modal</h4>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <p>One fine body&hellip;</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>  
-                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">
-                                                            <i class="fa fa-trash"></i> Delete
-                                                        </button>
-                                                        <div class="modal modal-danger fade" id="modal-danger">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span></button>
-                                                                    <h4 class="modal-title">Delete Participant</h4>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <p>Are you sure do you want to delete this participant</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-outline pull-left" >Yes</button>
-                                                                    <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
-                                                                </div>
-                                                                </div>
-                                                                <!-- /.modal-content -->
-                                                            </div>
-                                                            <!-- /.modal-dialog -->
-                                                        </div>
-                                                        <!-- /.modal -->
-                                                    </center>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nama</th>
-                                                <th>Nim</th>
-                                                <th>Email</th>
-                                                <th>Program Studi</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                    
                                 </div>
                             </div>
                         </div>
