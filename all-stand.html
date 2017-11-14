@@ -32,8 +32,8 @@
         <![endif]-->
 
         <!-- Google Font -->
-        <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
     </head>
 
     <body class="fixed skin-blue sidebar-mini" style="">
@@ -169,16 +169,95 @@
                             <div class="box">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">All Stand</h3>
+                                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#tambah-stand">
+                                        <i class="fa fa-rocket"></i>
+                                    </button>
                                     <div class="box-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     </div>
                                 </div>
                             
                                 <div class="box-body">
-                                    
+                                    <div class="content">
+                                        <div class="row">
+                                            <!-- Stand ADD Here! -->
+                                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                                <div class="info-box">
+                                                    <span class="info-box-icon bg-aqua"><i class="fa fa-bookmark-o"></i></span>
+                                                    
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">{{nama.stand}}</span>
+                                                        <span class="info-box-number">{{jumlah.peserta}}</span>
+                                                    </div>
+                                                    <!-- /.info-box-content -->
+                                                </div>
+                                                <!-- /.info-box -->
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="col-md-12">
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">All Participant in Stand</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div class="content">
+                                        <div class="row">
+                                        <h1>ajhvcha</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <div class="modal fade" id="tambah-stand" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span></button>
+                                <h4 class="modal-title">Tambah Stand</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="nama-stand" class="col-sm-3 control-label">Nama Stand</label>
+                    
+                                        <div class="col-sm-9">
+                                        <input class="form-control" id="nama-stand">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jenis-stand" class="col-sm-3 control-label">Jenis Stand</label>
+                    
+                                        <div class="col-sm-9">
+                                        <input class="form-control" id="jenis-stand">
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                    <!-- /.box-body -->
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-info pull-right"><b>Create</b></button>
+                                    </div>
+                                    <!-- /.box-footer -->
+                                </form>
+                            </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                    <!-- /.modal-dialog -->
                     </div>
                 </section>
             </div>
