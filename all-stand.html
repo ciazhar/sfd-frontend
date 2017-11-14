@@ -181,13 +181,15 @@
                                     <div class="content">
                                         <div class="row">
                                             <!-- Stand ADD Here! -->
-                                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                            <div class="col-md-4 col-sm-6 col-xs-12">
                                                 <div class="info-box">
                                                     <span class="info-box-icon bg-aqua"><i class="fa fa-bookmark-o"></i></span>
                                                     
                                                     <div class="info-box-content">
                                                         <span class="info-box-text">{{nama.stand}}</span>
                                                         <span class="info-box-number">{{jumlah.peserta}}</span>
+                                                        <br>
+                                                        <a data-toggle="modal" data-target="#participant-done"><i class="fa fa-arrow-circle-right"></i></a>
                                                     </div>
                                                     <!-- /.info-box-content -->
                                                 </div>
@@ -218,42 +220,53 @@
                         </div> -->
 
                     </div>
+                    <div class="modal fade" id="participant-done" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title">Participant yang sudah ke Stand</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="modal fade" id="tambah-stand" style="display: none;">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span></button>
-                                <h4 class="modal-title">Tambah Stand</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="nama-stand" class="col-sm-3 control-label">Nama Stand</label>
-                    
-                                        <div class="col-sm-9">
-                                        <input class="form-control" id="nama-stand">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title">Tambah Stand</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal">
+                                        <div class="box-body">
+                                        <div class="form-group">
+                                            <label for="nama-stand" class="col-sm-3 control-label">Nama Stand</label>
+                        
+                                            <div class="col-sm-9">
+                                            <input class="form-control" id="nama-stand">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="jenis-stand" class="col-sm-3 control-label">Jenis Stand</label>
-                    
-                                        <div class="col-sm-9">
-                                        <input class="form-control" id="jenis-stand">
+                                        <div class="form-group">
+                                            <label for="jenis-stand" class="col-sm-3 control-label">Jenis Stand</label>
+                        
+                                            <div class="col-sm-9">
+                                            <input class="form-control" id="jenis-stand">
+                                            </div>
                                         </div>
-                                    </div>
-                                    
-                                    </div>
-                                    <!-- /.box-body -->
-                                    <div class="box-footer">
-                                        <button type="submit" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-info pull-right"><b>Create</b></button>
-                                    </div>
-                                    <!-- /.box-footer -->
-                                </form>
-                            </div>
+                                        
+                                        </div>
+                                        <!-- /.box-body -->
+                                        <div class="box-footer">
+                                            <button type="submit" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-info pull-right"><b>Create</b></button>
+                                        </div>
+                                        <!-- /.box-footer -->
+                                    </form>
+                                </div>
                             </div>
                             <!-- /.modal-content -->
                         </div>
@@ -306,12 +319,12 @@
         $(function () {
             $('#example1').DataTable()
             $('#example2').DataTable({
-            'paging'      : true,
-            'lengthChange': false,
-            'searching'   : false,
-            'ordering'    : true,
-            'info'        : true,
-            'autoWidth'   : false
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
             })
         })
         </script>
