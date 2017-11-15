@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="shortcut icon" href="img/favicon.ico">
     <!-- Bootstrap external -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Custom Fonts -->
@@ -55,6 +55,21 @@
         box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
       }
 
+      .scrollup {
+        display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/22173-200.png")      
+}
     </style>
 </head>
 
@@ -67,8 +82,12 @@
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                   <span class="sr-only"></span>Menu<i class="fa fa-bars"></i>
+
+
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Software Freedom Day</a>
+
+<img href="#pagetop" src="img/fav.png" alt="logo.png">
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">Software Freedom Day</a> -->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,13 +97,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#detail">Detail Acara</a>
+                        <a class="page-scroll" href="#detail"><b>Detail Acara</b></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#rundown">Rundown Acara</a>
+                        <a class="page-scroll" href="#rundown"><b> Acara</b></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#pembicara">Pembicara</a>
+                        <a class="page-scroll" href="#pembicara"><b>Pembicara</b></a>
                     </li>
                 </ul>
             </div>
@@ -96,7 +115,7 @@
     <!-- Header -->
     <header style="background-color: #181735;">
         <div class="container">
-            <div class="intro-text">
+            <div class="intro-text"><br>
                 <a href="#daftar" class="page-scroll btn btn-xl" style="margin-top:20ex;">Daftar</a>
             </div>
         </div>
@@ -351,6 +370,7 @@
             </div>
         </div>
     </aside>
+    
     <footer id="footer">
         <div class="container">
             <div class="row">
@@ -393,7 +413,34 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+    
+    <!-- scrool UP -->
+    <a href="#" class="scrollup"><b>TOP</b></a>
 
+<script>
+
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+});
+
+</script>
+
+  
 </body>
 
 </html>
