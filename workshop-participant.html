@@ -36,8 +36,8 @@
                 href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
 
-    <body class="fixed skin-blue sidebar-mini" style="">
-        <div class="wrapper">
+    <body class="fixed skin-blue sidebar-mini" style="" ng-app="app">
+        <div class="wrapper" ng-controller="workshopController">
             <header class="main-header">
                 <!-- Logo -->
                 <a href="dashboard.html" class="logo">
@@ -219,18 +219,18 @@
                                         <thead>
                                             <tr>
                                                 <th>Nama</th>
-                                                <th>Nim</th>
+                                                <th>Username</th>
                                                 <th>Email</th>
-                                                <th>Program Studi</th>
+                                                <th>Phone Number</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>{{user.name}}</td>
-                                                <td>{{user.nim}}</td>
+                                            <tr ng-repeat="user in daftarParticipant">
+                                                <td>{{user.firstName}} {{user.lastName}}</td>
+                                                <td>{{user.username}}</td>
                                                 <td>{{user.email}}</td>
-                                                <td>{{user.progdi}}</td>
+                                                <td>{{user.phoneNumber}}</td>
                                                 <td>      
                                                     <center>       
                                                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
@@ -285,9 +285,9 @@
                                         <tfoot>
                                             <tr>
                                                 <th>Nama</th>
-                                                <th>Nim</th>
+                                                <th>Username</th>
                                                 <th>Email</th>
-                                                <th>Program Studi</th>
+                                                <th>Phone Number</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
@@ -339,6 +339,8 @@
         <!-- AdminLTE for demo purposes -->
         <!-- <script src="./dist/js/demo.js"></script> -->
         <!-- page script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="./js/angular/workshop-participant.js"></script>
         <script>
         $(function () {
             $('#example1').DataTable()
